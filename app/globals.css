@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Twin Thrift theme using Tailwind v4 @theme */
+@theme {
+  --color-sand: #ece2ce; /* sand */
+  --color-lilac: #d7d0e1; /* lilac */
+  --color-blush: #f8f3f6; /* blush */
+  --color-antique: #faebd7; /* antique white */
+  --color-oat: #f7edda; /* oat */
+  --color-ink: #060609; /* near-black */
+
+  --font-display: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-oat text-ink antialiased;
+}
+
+a {
+  @apply underline decoration-lilac/40 underline-offset-4 hover:decoration-lilac;
+}
+
+.container-responsive {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}

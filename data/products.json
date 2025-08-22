@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "slug": "vintage-denim-jacket",
+    "name": "Vintage Denim Jacket",
+    "brand": "Levi's",
+    "category": "Jackets & Coats",
+    "price": 45,
+    "size": "M",
+    "image": "https://images.unsplash.com/photo-1520975979652-0f3ec4c3a8a0?q=80&w=1200&auto=format&fit=crop",
+    "description": "Classic denim with a worn-in look."
+  },
+  {
+    "id": "2",
+    "slug": "floral-summer-dress",
+    "name": "Floral Summer Dress",
+    "brand": "Zara",
+    "category": "Dresses",
+    "price": 28,
+    "size": "S",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop",
+    "description": "Lightweight and breezy."
+  },
+  {
+    "id": "3",
+    "slug": "wool-knit-jumper",
+    "name": "Wool Knit Jumper",
+    "brand": "H&M",
+    "category": "Jumpers",
+    "price": 22,
+    "size": "L",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+    "description": "Cozy and warm for cooler days."
+  },
+  {
+    "id": "4",
+    "slug": "black-leather-boots",
+    "name": "Black Leather Boots",
+    "brand": "Dr. Martens",
+    "category": "Shoes",
+    "price": 65,
+    "size": "41",
+    "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=1200&auto=format&fit=crop",
+    "description": "Durable boots with attitude."
+  },
+  {
+    "id": "5",
+    "slug": "linen-wide-leg-trousers",
+    "name": "Linen Wide-Leg Trousers",
+    "brand": "COS",
+    "category": "Trousers",
+    "price": 35,
+    "size": "M",
+    "image": "https://images.unsplash.com/photo-1520974735194-489f1f132723?q=80&w=1200&auto=format&fit=crop",
+    "description": "Breathable natural fibers."
+  },
+  {
+    "id": "6",
+    "slug": "silk-button-up-blouse",
+    "name": "Silk Button-up Blouse",
+    "brand": "& Other Stories",
+    "category": "Tops",
+    "price": 30,
+    "size": "S",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
+    "description": "Soft drape and subtle sheen."
+  },
+  {
+    "id": "7",
+    "slug": "classic-blue-jeans",
+    "name": "Classic Blue Jeans",
+    "brand": "Wrangler",
+    "category": "Jeans",
+    "price": 25,
+    "size": "32",
+    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop",
+    "description": "Timeless fit and wash."
+  },
+  {
+    "id": "8",
+    "slug": "mini-crossbody-bag",
+    "name": "Mini Crossbody Bag",
+    "brand": "Kate Spade",
+    "category": "Bags",
+    "price": 40,
+    "size": "One Size",
+    "image": "https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1200&auto=format&fit=crop",
+    "description": "Compact and chic."
+  }
+]
