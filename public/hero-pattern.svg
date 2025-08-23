@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <pattern id="dot" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d7d0e1" fill-opacity="0.35" />
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f3f6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ece2ce" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#dot)"/>
+  <rect width="800" height="600" fill="url(#fade)"/>
+</svg>
