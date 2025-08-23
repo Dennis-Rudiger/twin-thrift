@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-lilac/30 bg-gradient-to-b from-ink via-ink/95 to-ink/90 text-oat">
-      <div className="container-responsive grid gap-10 py-12 text-sm md:grid-cols-4">
+      <div className="container-responsive grid gap-8 py-12 text-sm md:grid-cols-4">
         {/* Brand */}
         <div className="space-y-3">
           <p className="font-semibold text-oat">Twin Thrift</p>

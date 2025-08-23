@@ -8,11 +8,11 @@ export default async function HomePage() {
     <div className="space-y-12">
       <Hero />
       <section className="space-y-6">
-        <header className="flex items-baseline justify-between">
+        <header className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 className="text-2xl font-semibold tracking-tight">New in</h2>
           <a href="/shop" className="text-sm">Shop all →</a>
         </header>
-        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {products.map((p: Product) => (
             <li key={p.id}>
               <ProductCard product={p} />

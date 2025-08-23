@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-lilac/30 bg-ink/90 p-8 md:p-12">
+  <section className="relative overflow-hidden rounded-2xl border border-lilac/30 bg-ink/90 p-6 md:p-12">
       {/* Background image from Unsplash */}
       <Image
         aria-hidden
@@ -16,7 +16,7 @@ export default function Hero() {
       />
       <div className="mx-auto max-w-7xl">
         {/* Glassmorphism content panel */}
-        <div className="relative max-w-2xl rounded-2xl border border-oat/30 bg-oat/15 p-6 md:p-8 backdrop-blur-xl shadow-xl">
+  <div className="relative max-w-2xl rounded-2xl border border-oat/30 bg-oat/15 p-5 md:p-8 backdrop-blur-xl shadow-xl">
           <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-white/25 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-8 -right-16 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
 
