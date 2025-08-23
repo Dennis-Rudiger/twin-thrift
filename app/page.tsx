@@ -12,7 +12,7 @@ export default async function HomePage() {
           <h2 className="text-2xl font-semibold tracking-tight">New in</h2>
           <a href="/shop" className="text-sm">Shop all →</a>
         </header>
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+  <ul className="flex flex-col gap-4 sm:grid sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {products.map((p: Product) => (
             <li key={p.id}>
               <ProductCard product={p} />

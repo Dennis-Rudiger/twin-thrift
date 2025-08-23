@@ -17,7 +17,7 @@ export default function AboutPage() {
       {/* Pillars */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">What we stand for</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {[
             { t: 'Quality assured', d: 'Every piece is checked for authenticity and condition before it goes live.', img: 'https://images.unsplash.com/photo-1520975661595-6453be3f7070?q=80&w=1200&auto=format&fit=crop' },
             { t: 'Hassle‑free', d: 'We handle photography, listings, shipping, and returns so you don’t have to.', img: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop' },

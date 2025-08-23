@@ -21,7 +21,7 @@ export default function SellPage() {
       {/* How it works */}
       <section id="how" className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">How it works</h2>
-        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <ol className="flex flex-col gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: '01', t: 'Request a bag', d: 'Tell us about your items and request a pre‑paid return bag.' },
             { n: '02', t: 'Send it in', d: 'Drop it off or schedule a pickup—your choice.' },
@@ -59,7 +59,7 @@ export default function SellPage() {
       {/* Payouts & fees */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight">Payouts & fees</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-3">
           {[
             { t: 'Commission', d: 'Transparent sliding scale based on final sale price.', img: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop' },
             { t: 'Instant balance', d: 'Easily track sales and withdraw your funds any time.', img: 'https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200&auto=format&fit=crop' },
@@ -76,7 +76,7 @@ export default function SellPage() {
       {/* FAQ */}
       <section id="faq" className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight">FAQs</h2>
-        <div className="grid gap-3">
+  <div className="flex flex-col gap-3 sm:grid">
           {[
             { q: 'How long until my items go live?', a: 'Typically 3–7 business days after we receive and quality check them.' },
             { q: 'What if something doesn’t sell?', a: 'We’ll follow your preference: donate, return, or further discount.' },

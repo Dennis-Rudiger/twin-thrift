@@ -27,9 +27,9 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
         <input name="max" placeholder="Max" defaultValue={max} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
         <button className="w-full rounded-md bg-ink px-4 py-2 text-oat md:w-auto">Filter</button>
       </form>
-  <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+      <ul className="flex flex-col gap-4 sm:grid sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {products.map((p: Product) => (
-          <li key={p.id}><ProductCard product={p} /></li>
+          <li key={p.id}><ProductCard product={p} compact /></li>
         ))}
       </ul>
     </div>
