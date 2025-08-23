@@ -3,13 +3,14 @@ import ProductCard from '@/components/ProductCard'
 
 export const dynamic = 'force-static'
 
-export default async function ShopPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const q = typeof searchParams.q === 'string' ? searchParams.q : undefined
-  const brand = typeof searchParams.brand === 'string' ? searchParams.brand : undefined
-  const category = typeof searchParams.category === 'string' ? searchParams.category : undefined
-  const size = typeof searchParams.size === 'string' ? searchParams.size : undefined
-  const min = typeof searchParams.min === 'string' ? Number(searchParams.min) : undefined
-  const max = typeof searchParams.max === 'string' ? Number(searchParams.max) : undefined
+export default async function ShopPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const sp = await searchParams
+  const q = typeof sp.q === 'string' ? sp.q : undefined
+  const brand = typeof sp.brand === 'string' ? sp.brand : undefined
+  const category = typeof sp.category === 'string' ? sp.category : undefined
+  const size = typeof sp.size === 'string' ? sp.size : undefined
+  const min = typeof sp.min === 'string' ? Number(sp.min) : undefined
+  const max = typeof sp.max === 'string' ? Number(sp.max) : undefined
 
   const products = await getProducts({ q, brand, category, size, min, max })
 

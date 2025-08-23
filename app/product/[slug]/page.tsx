@@ -2,8 +2,9 @@ import { getProductBySlug } from '@/lib/products'
 import AddToCartButton from '@/components/AddToCartButton'
 import { notFound } from 'next/navigation'
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product = await getProductBySlug(params.slug)
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = await getProductBySlug(slug)
   if (!product) return notFound()
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
