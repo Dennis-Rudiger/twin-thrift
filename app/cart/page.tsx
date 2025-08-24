@@ -57,6 +57,7 @@ export default function CartPage() {
                 buildCartInquiryText({
                   items: cart.items.map((it) => ({ name: it.name, qty: it.qty, price: it.price })),
                   subtotal: cart.subtotal,
+                  tagline: process.env.NEXT_PUBLIC_WHATSAPP_TAGLINE || '',
                 })
               )}
               target="_blank"
