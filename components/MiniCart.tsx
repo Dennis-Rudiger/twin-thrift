@@ -1,6 +1,7 @@
 "use client"
 import { useState, useMemo, useEffect } from 'react'
 import { useCart } from '@/components/CartProvider'
+import { formatKES } from '@/lib/currency'
 
 export default function MiniCart() {
   const cart = useCart()
@@ -58,9 +59,9 @@ export default function MiniCart() {
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-2 text-sm">
                         <p className="truncate font-medium">{it.name}</p>
-                        <p className="shrink-0">${(it.price * it.qty).toFixed(2)}</p>
+                        <p className="shrink-0">{formatKES(it.price * it.qty)}</p>
                       </div>
-                      <p className="text-xs text-ink/60">${it.price.toFixed(2)} each</p>
+                      <p className="text-xs text-ink/60">{formatKES(it.price)} each</p>
                       <div className="mt-2 flex items-center gap-2">
                         <button className="rounded-md border border-lilac/40 px-2 py-1" onClick={() => cart.decrement(it.id)}>-</button>
                         <input
@@ -80,7 +81,7 @@ export default function MiniCart() {
                 ))}
                 <div className="flex items-center justify-between border-t border-lilac/30 pt-3">
                   <p className="text-sm">Subtotal</p>
-                  <p className="text-lg font-semibold">${cart.subtotal.toFixed(2)}</p>
+                  <p className="text-lg font-semibold">{formatKES(cart.subtotal)}</p>
                 </div>
                 <a href="/cart" className="block rounded-md bg-ink px-4 py-2 text-center text-oat no-underline">Review cart</a>
                 <button className="w-full rounded-md border border-lilac/40 bg-blush px-4 py-2" onClick={() => cart.clear()}>Clear</button>

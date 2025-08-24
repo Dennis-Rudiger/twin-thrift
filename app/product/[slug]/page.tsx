@@ -1,4 +1,5 @@
 import { getProductBySlug } from '@/lib/products'
+import { formatKES } from '@/lib/currency'
 import AddToCartButton from '@/components/AddToCartButton'
 import { notFound } from 'next/navigation'
 
@@ -13,7 +14,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <div className="space-y-4">
         <h1 className="text-3xl font-semibold">{product.name}</h1>
         <p className="text-ink/70">{product.brand} • {product.category}{product.size ? ` • Size ${product.size}` : ''}</p>
-  <p className="text-2xl">${product.price.toFixed(2)}</p>
+  <p className="text-2xl">{formatKES(product.price)}</p>
   <AddToCartButton id={product.id} name={product.name} price={product.price} image={product.image} />
         <p className="text-ink/70">{product.description}</p>
       </div>

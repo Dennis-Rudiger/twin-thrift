@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { formatKES } from '@/lib/currency'
 import type { Product } from '@/lib/products'
 
 type Props = { product: Product; compact?: boolean }
@@ -17,7 +18,7 @@ export default function ProductCard({ product, compact = false }: Props) {
       <div className={`mt-2 ${compact ? 'text-[13px]' : 'text-sm'}`}>
         <div className="flex items-center justify-between gap-2">
           <p className="truncate font-medium text-ink">{product.name}</p>
-          <p className="text-ink/80">${product.price.toFixed(2)}</p>
+          <p className="text-ink/80">{formatKES(product.price)}</p>
         </div>
         <p className="truncate text-ink/60">{product.brand}</p>
       </div>

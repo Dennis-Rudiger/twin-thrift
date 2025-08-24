@@ -16,9 +16,11 @@ export default function Footer() {
         <nav className="space-y-2">
           <p className="font-medium">Shop</p>
           <a className="block no-underline hover:underline" href="/shop">All</a>
-          <a className="block no-underline hover:underline" href="/shop?category=Dresses">Dresses</a>
-          <a className="block no-underline hover:underline" href="/shop?category=Jackets">Outerwear</a>
-          <a className="block no-underline hover:underline" href="/shop?category=Bags">Bags</a>
+          <a className="block no-underline hover:underline" href="/shop?category=Mummy%20Jeans">Mummy Jeans</a>
+          <a className="block no-underline hover:underline" href="/shop?category=Corduroy%20Pants">Corduroy Pants</a>
+          <a className="block no-underline hover:underline" href="/shop?category=Denim%20Shorts">Denim Shorts</a>
+          <a className="block no-underline hover:underline" href="/shop?category=Cargo%20Pants">Cargo Pants</a>
+          <a className="block no-underline hover:underline" href="/shop?category=Flannel%20Shirts">Flannel Shirts</a>
         </nav>
 
         {/* Help */}

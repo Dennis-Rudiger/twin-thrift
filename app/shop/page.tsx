@@ -22,10 +22,17 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
       <form className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-6">
         <input name="q" placeholder="Search" defaultValue={q} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
         <input name="brand" placeholder="Brand" defaultValue={brand} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
-        <input name="category" placeholder="Category" defaultValue={category} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
+        <select name="category" defaultValue={category} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2">
+          <option value="">All categories</option>
+          <option value="Mummy Jeans">Mummy Jeans</option>
+          <option value="Corduroy Pants">Corduroy Pants</option>
+          <option value="Denim Shorts">Denim Shorts</option>
+          <option value="Cargo Pants">Cargo Pants</option>
+          <option value="Flannel Shirts">Flannel Shirts</option>
+        </select>
         <input name="size" placeholder="Size" defaultValue={size} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
-        <input name="min" placeholder="Min" defaultValue={min} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
-        <input name="max" placeholder="Max" defaultValue={max} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
+        <input name="min" placeholder="Min (KES)" defaultValue={min} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
+        <input name="max" placeholder="Max (KES)" defaultValue={max} className="w-full rounded-md border border-lilac/40 bg-blush px-3 py-2" />
         <button className="w-full rounded-md bg-ink px-4 py-2 text-oat md:w-auto">Filter</button>
       </form>
       <ul className="flex flex-col gap-4 sm:grid sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">

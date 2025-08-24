@@ -1,90 +1,90 @@
 [
   {
     "id": "1",
-    "slug": "vintage-denim-jacket",
-    "name": "Vintage Denim Jacket",
+  "slug": "vintage-denim-shorts",
+  "name": "Vintage Denim Shorts",
     "brand": "Levi's",
-    "category": "Jackets & Coats",
-    "price": 45,
+  "category": "Denim Shorts",
+  "price": 3500,
     "size": "M",
     "image": "https://images.unsplash.com/photo-1520975979652-0f3ec4c3a8a0?q=80&w=1200&auto=format&fit=crop",
-    "description": "Classic denim with a worn-in look."
+  "description": "Classic denim shorts with a worn-in look."
   },
   {
     "id": "2",
-    "slug": "floral-summer-dress",
-    "name": "Floral Summer Dress",
+  "slug": "high-rise-mummy-jeans",
+  "name": "High-Rise Mummy Jeans",
     "brand": "Zara",
-    "category": "Dresses",
-    "price": 28,
+  "category": "Mummy Jeans",
+  "price": 2800,
     "size": "S",
     "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop",
-    "description": "Lightweight and breezy."
+  "description": "High-waist, tapered leg with vintage vibes."
   },
   {
     "id": "3",
-    "slug": "wool-knit-jumper",
-    "name": "Wool Knit Jumper",
+  "slug": "classic-flannel-shirt",
+  "name": "Classic Flannel Shirt",
     "brand": "H&M",
-    "category": "Jumpers",
-    "price": 22,
+  "category": "Flannel Shirts",
+  "price": 2200,
     "size": "L",
     "image": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-    "description": "Cozy and warm for cooler days."
+  "description": "Soft flannel in a timeless check."
   },
   {
     "id": "4",
-    "slug": "black-leather-boots",
-    "name": "Black Leather Boots",
+  "slug": "utility-cargo-pants",
+  "name": "Utility Cargo Pants",
     "brand": "Dr. Martens",
-    "category": "Shoes",
-    "price": 65,
+  "category": "Cargo Pants",
+  "price": 6500,
     "size": "41",
     "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=1200&auto=format&fit=crop",
-    "description": "Durable boots with attitude."
+  "description": "Multiple pockets and durable canvas."
   },
   {
     "id": "5",
-    "slug": "linen-wide-leg-trousers",
-    "name": "Linen Wide-Leg Trousers",
+  "slug": "classic-corduroy-pants",
+  "name": "Classic Corduroy Pants",
     "brand": "COS",
-    "category": "Trousers",
-    "price": 35,
+  "category": "Corduroy Pants",
+  "price": 3500,
     "size": "M",
     "image": "https://images.unsplash.com/photo-1520974735194-489f1f132723?q=80&w=1200&auto=format&fit=crop",
-    "description": "Breathable natural fibers."
+  "description": "Soft wale corduroy with straight fit."
   },
   {
     "id": "6",
-    "slug": "silk-button-up-blouse",
-    "name": "Silk Button-up Blouse",
+  "slug": "vintage-mummy-jeans",
+  "name": "Vintage Mummy Jeans",
     "brand": "& Other Stories",
-    "category": "Tops",
-    "price": 30,
+  "category": "Mummy Jeans",
+  "price": 3000,
     "size": "S",
     "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
-    "description": "Soft drape and subtle sheen."
+  "description": "Relaxed taper and authentic vintage wash."
   },
   {
     "id": "7",
-    "slug": "classic-blue-jeans",
-    "name": "Classic Blue Jeans",
+  "slug": "classic-mummy-jeans",
+  "name": "Classic Mummy Jeans",
     "brand": "Wrangler",
-    "category": "Jeans",
-    "price": 25,
+  "category": "Mummy Jeans",
+  "price": 2500,
     "size": "32",
     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop",
     "description": "Timeless fit and wash."
   },
   {
     "id": "8",
-    "slug": "mini-crossbody-bag",
-    "name": "Mini Crossbody Bag",
+  "slug": "plaid-flannel-shirt",
+  "name": "Plaid Flannel Shirt",
     "brand": "Kate Spade",
-    "category": "Bags",
-    "price": 40,
+  "category": "Flannel Shirts",
+  "price": 4000,
     "size": "One Size",
     "image": "https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1200&auto=format&fit=crop",
-    "description": "Compact and chic."
+  "description": "Medium-weight plaid flannel with button front."
   }
 ]

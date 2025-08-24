@@ -1,5 +1,6 @@
 "use client"
 import { useCart } from '@/components/CartProvider'
+import { formatKES } from '@/lib/currency'
 
 export default function CartPage() {
   const cart = useCart()
@@ -20,9 +21,9 @@ export default function CartPage() {
                   <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0">
                       <p className="truncate text-base font-medium">{it.name}</p>
-                      <p className="text-sm text-ink/60">${it.price.toFixed(2)} each</p>
+                      <p className="text-sm text-ink/60">{formatKES(it.price)} each</p>
                     </div>
-                    <p className="shrink-0 text-base font-semibold">${(it.price * it.qty).toFixed(2)}</p>
+                    <p className="shrink-0 text-base font-semibold">{formatKES(it.price * it.qty)}</p>
                   </div>
                   <div className="mt-3 flex items-center gap-2">
                     <button className="rounded-md border border-lilac/40 px-2 py-1" onClick={() => cart.decrement(it.id)}>-</button>
@@ -46,7 +47,7 @@ export default function CartPage() {
             <h2 className="text-lg font-semibold">Order summary</h2>
             <div className="mt-3 flex items-center justify-between text-sm">
               <span>Subtotal</span>
-              <span className="font-medium">${cart.subtotal.toFixed(2)}</span>
+              <span className="font-medium">{formatKES(cart.subtotal)}</span>
             </div>
             <p className="mt-1 text-xs text-ink/60">Shipping and taxes are calculated at checkout.</p>
             <button className="mt-4 w-full rounded-md bg-ink px-4 py-2 text-oat">Checkout</button>

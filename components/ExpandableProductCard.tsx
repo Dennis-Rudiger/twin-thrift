@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react'
 import Link from 'next/link'
+import { formatKES } from '@/lib/currency'
 import type { Product } from '@/lib/products'
 
 type Props = { product: Product }
@@ -18,7 +19,7 @@ export default function ExpandableProductCard({ product }: Props) {
         {/* Title row */}
         <div className={`flex items-center justify-between gap-2 ${open ? 'text-base' : 'text-sm'}`}>
           <p className="truncate font-medium text-ink">{product.name}</p>
-          <p className="shrink-0 text-ink/80">${product.price.toFixed(2)}</p>
+          <p className="shrink-0 text-ink/80">{formatKES(product.price)}</p>
         </div>
         <p className={`truncate text-ink/60 ${open ? 'mt-1' : ''}`}>{product.brand}</p>
 
