@@ -1,6 +1,4 @@
-import ProductCard from '@/components/ProductCard'
 import ExpandableProductCard from '@/components/ExpandableProductCard'
-import Filters from '@/components/Filters'
 import { getProducts, type Product } from '@/lib/products'
 
 export const dynamic = 'force-static'

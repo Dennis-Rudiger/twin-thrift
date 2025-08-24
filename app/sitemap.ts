@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import products from '@/data/products.json'
+import type { Product } from '@/lib/products'
 import { getSiteUrl } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${url}/contact`, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
-  const productRoutes: MetadataRoute.Sitemap = (products as any[]).map((p) => ({
+  const productRoutes: MetadataRoute.Sitemap = (products as Product[]).map((p) => ({
     url: `${url}/product/${p.slug}`,
     changeFrequency: 'weekly',
     priority: 0.8,

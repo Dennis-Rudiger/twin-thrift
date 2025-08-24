@@ -1,4 +1,4 @@
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
+//
 
 export default function Footer() {
   return (
