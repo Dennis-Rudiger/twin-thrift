@@ -59,6 +59,7 @@ Open http://localhost:3000
 	- `NEXT_PUBLIC_WHATSAPP_PHONE` = +254751660546
 	- `WHATSAPP_PHONE` = +254751660546 (optional; server-side)
 	- `NEXT_PUBLIC_WHATSAPP_TAGLINE` = Twin Thrift • Sustainable style, local love (optional)
+	- `NEXT_PUBLIC_SITE_URL` = https://twin-thrift.vercel.app
 4) Click Deploy. Vercel auto-detects Next.js and runs `npm install` and `npm run build`.
 
 Troubleshooting:
