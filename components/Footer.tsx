@@ -1,3 +1,5 @@
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
+
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-lilac/30 bg-gradient-to-b from-ink via-ink/95 to-ink/90 text-oat">
@@ -37,7 +39,9 @@ export default function Footer() {
           <p className="font-medium">Community</p>
           <p className="text-oat/80">Join our WhatsApp group for drop alerts, sizing help, and style swaps.</p>
           <a
-            href="#" /* Replace with your real invite link */
+            href={"https://chat.whatsapp.com/I2RFurfZO1yH6h4y7ThbX1?mode=ac_t"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-lilac/40 bg-green-200 px-3 py-1 text-ink no-underline"
           >
             <span className="h-2 w-2 rounded-full bg-green-600" />

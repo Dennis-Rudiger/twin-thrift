@@ -2,6 +2,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { useCart } from '@/components/CartProvider'
 import { formatKES } from '@/lib/currency'
+import { buildCartInquiryText, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export default function MiniCart() {
   const cart = useCart()
@@ -39,7 +40,7 @@ export default function MiniCart() {
             onClick={() => setOpen(false)}
           />
           <aside
-            className="fixed right-0 top-0 z-[61] h-full w-[90vw] max-w-sm overflow-y-auto border-l border-lilac/30 bg-oat/60 p-4 backdrop-blur-xl shadow-xl"
+            className="fixed right-0 top-0 z-[61] h-full w-[95vw] max-w-xl overflow-y-auto border-l border-lilac/30 bg-oat/60 p-5 backdrop-blur-xl shadow-xl"
             role="dialog"
             aria-modal="true"
             aria-label="Mini cart"
@@ -84,6 +85,22 @@ export default function MiniCart() {
                   <p className="text-lg font-semibold">{formatKES(cart.subtotal)}</p>
                 </div>
                 <a href="/cart" className="block rounded-md bg-ink px-4 py-2 text-center text-oat no-underline">Review cart</a>
+                {cart.items.length > 0 && (
+                  <a
+                    href={buildWhatsAppUrl(
+                      process.env.NEXT_PUBLIC_WHATSAPP_PHONE || process.env.WHATSAPP_PHONE || '',
+                      buildCartInquiryText({
+                        items: cart.items.map((it) => ({ name: it.name, qty: it.qty, price: it.price })),
+                        subtotal: cart.subtotal,
+                      })
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-md border border-lilac/40 bg-green-200 px-4 py-2 text-center text-ink no-underline"
+                  >
+                    WhatsApp to order
+                  </a>
+                )}
                 <button className="w-full rounded-md border border-lilac/40 bg-blush px-4 py-2" onClick={() => cart.clear()}>Clear</button>
               </div>
             )}

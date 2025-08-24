@@ -1,6 +1,7 @@
 "use client"
 import { useCart } from '@/components/CartProvider'
 import { formatKES } from '@/lib/currency'
+import { buildCartInquiryText, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export default function CartPage() {
   const cart = useCart()
@@ -50,7 +51,20 @@ export default function CartPage() {
               <span className="font-medium">{formatKES(cart.subtotal)}</span>
             </div>
             <p className="mt-1 text-xs text-ink/60">Shipping and taxes are calculated at checkout.</p>
-            <button className="mt-4 w-full rounded-md bg-ink px-4 py-2 text-oat">Checkout</button>
+            <a
+              href={buildWhatsAppUrl(
+                process.env.NEXT_PUBLIC_WHATSAPP_PHONE || process.env.WHATSAPP_PHONE || '',
+                buildCartInquiryText({
+                  items: cart.items.map((it) => ({ name: it.name, qty: it.qty, price: it.price })),
+                  subtotal: cart.subtotal,
+                })
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block w-full rounded-md bg-green-600 px-4 py-2 text-center text-oat no-underline"
+            >
+              WhatsApp to order
+            </a>
             <button className="mt-2 w-full rounded-md border border-lilac/40 bg-blush px-4 py-2" onClick={() => cart.clear()}>Clear cart</button>
           </aside>
         </div>
