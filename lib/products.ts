@@ -39,3 +39,8 @@ export async function getProducts(query: ProductQuery = {}): Promise<Product[]> 
 export async function getProductBySlug(slug: string): Promise<Product | undefined> {
   return (productsData as Product[]).find((p) => p.slug === slug)
 }
+
+// Lightweight sync getter for client components needing metadata by id
+export function getProductById(id: string): Product | undefined {
+  return (productsData as Product[]).find((p) => p.id === id)
+}

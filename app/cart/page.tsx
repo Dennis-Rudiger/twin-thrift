@@ -2,6 +2,7 @@
 import { useCart } from '@/components/CartProvider'
 import { formatKES } from '@/lib/currency'
 import { buildCartInquiryText, buildWhatsAppUrl } from '@/lib/whatsapp'
+import ExpandableCartItem from '@/components/ExpandableCartItem'
 
 export default function CartPage() {
   const cart = useCart()
@@ -15,32 +16,8 @@ export default function CartPage() {
         <div className="grid gap-6 md:grid-cols-[1fr_320px]">
           <ul className="space-y-4">
             {cart.items.map((it) => (
-              <li key={it.id} className="flex gap-4 rounded-xl border border-lilac/30 bg-oat p-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={it.image} alt="" className="h-24 w-24 rounded-md object-cover" />
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="min-w-0">
-                      <p className="truncate text-base font-medium">{it.name}</p>
-                      <p className="text-sm text-ink/60">{formatKES(it.price)} each</p>
-                    </div>
-                    <p className="shrink-0 text-base font-semibold">{formatKES(it.price * it.qty)}</p>
-                  </div>
-                  <div className="mt-3 flex items-center gap-2">
-                    <button className="rounded-md border border-lilac/40 px-2 py-1" onClick={() => cart.decrement(it.id)}>-</button>
-                    <input
-                      aria-label="Quantity"
-                      className="w-14 rounded-md border border-lilac/40 bg-blush p-1 text-center"
-                      value={it.qty}
-                      onChange={(e) => {
-                        const v = parseInt(e.target.value || '0', 10)
-                        if (Number.isFinite(v)) cart.update(it.id, Math.max(0, v))
-                      }}
-                    />
-                    <button className="rounded-md border border-lilac/40 px-2 py-1" onClick={() => cart.increment(it.id)}>+</button>
-                    <button className="ml-auto rounded-md border border-lilac/40 px-2 py-1" onClick={() => cart.remove(it.id)}>Remove</button>
-                  </div>
-                </div>
+              <li key={it.id}>
+                <ExpandableCartItem {...it} />
               </li>
             ))}
           </ul>
