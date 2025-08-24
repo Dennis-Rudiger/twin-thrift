@@ -31,7 +31,7 @@ npm run type-check
 Open http://localhost:3000
 
 ### WhatsApp order flow
-- The cart "WhatsApp to order" button opens WhatsApp Web on desktop or WhatsApp app on mobile with a prefilled message.
+- The cart "WhatsApp to order" button opens the WhatsApp app (desktop via api.whatsapp.com, mobile via wa.me) with a prefilled message.
 - If the message doesn’t prefill, use the "Copy message" button and paste it into WhatsApp.
 
 ### Troubleshooting (Windows)
@@ -51,6 +51,19 @@ Open http://localhost:3000
 ## Notes
 - Images use remote Unsplash placeholders. Replace with your own.
 - Tailwind v4 is configured via `postcss.config.mjs` and `@import "tailwindcss"` in `app/globals.css` with a `@theme` block for custom colors.
+
+## Deploy to Vercel
+1) Push this repo to GitHub.
+2) In Vercel, import the project from GitHub.
+3) Set Environment Variables (Production and Preview):
+	- `NEXT_PUBLIC_WHATSAPP_PHONE` = +254751660546
+	- `WHATSAPP_PHONE` = +254751660546 (optional; server-side)
+	- `NEXT_PUBLIC_WHATSAPP_TAGLINE` = Twin Thrift • Sustainable style, local love (optional)
+4) Click Deploy. Vercel auto-detects Next.js and runs `npm install` and `npm run build`.
+
+Troubleshooting:
+- If images from Unsplash fail, ensure `next.config.mjs` allows `images.unsplash.com` in `images.remotePatterns`.
+- If you need to force a rebuild, use Vercel’s “Redeploy” with cache disabled.
 
 ## License
 For demo use.

@@ -31,7 +31,7 @@ export default function Footer() {
           <a className="block no-underline hover:underline" href="/sell#faq">Selling FAQs</a>
           <a className="block no-underline hover:underline" href="/about">About</a>
           <a className="block no-underline hover:underline" href="#">Shipping & returns</a>
-          <a className="block no-underline hover:underline" href="#">Contact</a>
+          <a className="block no-underline hover:underline" href="/contact">Contact</a>
         </nav>
 
         {/* Community (WhatsApp) */}

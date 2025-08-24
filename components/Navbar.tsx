@@ -19,6 +19,7 @@ export default function Navbar() {
           <Link href="/shop" className="no-underline hover:underline">Shop</Link>
           <Link href="/sell" className="no-underline hover:underline">Sell</Link>
           <Link href="/about" className="no-underline hover:underline">About</Link>
+          <Link href="/contact" className="no-underline hover:underline">Contact</Link>
           <MiniCart />
         </nav>
 
@@ -48,6 +49,7 @@ export default function Navbar() {
           <Link onClick={() => setOpen(false)} href="/shop" className="rounded-md px-2 py-2 no-underline hover:underline">Shop</Link>
           <Link onClick={() => setOpen(false)} href="/sell" className="rounded-md px-2 py-2 no-underline hover:underline">Sell</Link>
           <Link onClick={() => setOpen(false)} href="/about" className="rounded-md px-2 py-2 no-underline hover:underline">About</Link>
+          <Link onClick={() => setOpen(false)} href="/contact" className="rounded-md px-2 py-2 no-underline hover:underline">Contact</Link>
         </nav>
       </div>
     </header>
