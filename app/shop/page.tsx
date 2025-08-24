@@ -1,4 +1,5 @@
 import ProductCard from '@/components/ProductCard'
+import ExpandableProductCard from '@/components/ExpandableProductCard'
 import Filters from '@/components/Filters'
 import { getProducts, type Product } from '@/lib/products'
 
@@ -29,7 +30,7 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
       </form>
       <ul className="flex flex-col gap-4 sm:grid sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {products.map((p: Product) => (
-          <li key={p.id}><ProductCard product={p} compact /></li>
+          <li key={p.id}><ExpandableProductCard product={p} /></li>
         ))}
       </ul>
     </div>

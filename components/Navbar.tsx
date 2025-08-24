@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { useState } from 'react'
+import MiniCart from '@/components/MiniCart'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -18,20 +19,24 @@ export default function Navbar() {
           <Link href="/shop" className="no-underline hover:underline">Shop</Link>
           <Link href="/sell" className="no-underline hover:underline">Sell</Link>
           <Link href="/about" className="no-underline hover:underline">About</Link>
+          <MiniCart />
         </nav>
 
         {/* Mobile toggle */}
-        <button
+        <div className="flex items-center gap-2 md:hidden">
+          <MiniCart />
+          <button
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
           className="inline-flex items-center justify-center rounded-md border border-lilac/40 bg-blush/80 p-2 md:hidden"
-        >
-          <span className="block h-0.5 w-5 bg-ink" />
-          <span className="sr-only">Menu</span>
-        </button>
+          >
+            <span className="block h-0.5 w-5 bg-ink" />
+            <span className="sr-only">Menu</span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu panel */}
