@@ -12,6 +12,7 @@ export default function ContactPage() {
   const whatsappLink = buildWhatsAppUrl(WHATSAPP_PHONE, 'Hi Twin Thrift! I have a question…')
   const email = 'hello@twinthrift.local' // placeholder; replace when ready
   const phone = '+254 751 660 546'
+  const groupUrl = process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || 'https://chat.whatsapp.com/INVITE_PLACEHOLDER'
 
   return (
     <div className="space-y-8">
@@ -59,11 +60,11 @@ export default function ContactPage() {
               <h3 className="font-medium">Business hours</h3>
               <p className="mt-1 text-sm text-ink/70">Mon–Sat: 9:00–18:00 EAT</p>
             </div>
-            <div className="rounded-xl border border-lilac/30 bg-oat/60 p-4">
+      <div className="rounded-xl border border-lilac/30 bg-oat/60 p-4">
               <h3 className="font-medium">Community</h3>
               <p className="mt-1 text-sm text-ink/70">Join our WhatsApp group for drops and deals.</p>
               <a
-                href="https://chat.whatsapp.com/INVITE_PLACEHOLDER"
+        href={groupUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block rounded-md border border-lilac/40 px-3 py-1 no-underline"

@@ -34,12 +34,12 @@ export default function Footer() {
           <a className="block no-underline hover:underline" href="/contact">Contact</a>
         </nav>
 
-        {/* Community (WhatsApp) */}
+    {/* Community (WhatsApp) */}
         <div className="space-y-3">
           <p className="font-medium">Community</p>
           <p className="text-oat/80">Join our WhatsApp group for drop alerts, sizing help, and style swaps.</p>
           <a
-            href={"https://chat.whatsapp.com/I2RFurfZO1yH6h4y7ThbX1?mode=ac_t"}
+      href={process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || "https://chat.whatsapp.com/I2RFurfZO1yH6h4y7ThbX1?mode=ac_t"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-lilac/40 bg-green-200 px-3 py-1 text-ink no-underline"
